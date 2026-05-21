@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero{
+    
+    
+}
+nav{
+    background: url(./images/desktop-image-hero-1.jpg);
+    
+
+    
+}
+
+ul{
+    display: none;
+}
+
+.hero-content{
+   
+}
