@@ -1,6 +1,12 @@
 :root {
-  --black: #000;
-  --white: #fff;
+  /* Colors */
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(0, 0%, 63%);
+  --grey-800: hsl(0, 0%, 27%);
+  --black: hsl(0, 0%, 0%);
+
+  /* Font */
+  --font-family: "League Spartan", system-ui, sans-serif;
 }
 
 * {
@@ -10,13 +16,23 @@
 }
 
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  line-height: 1.6;
-  color: #333;
+    font-family: var(--font-family);
+    font-size: 16px;           /* As per style guide */
+    color: var(--grey-800);
+    line-height: 1.6;
 }
+
+/* Typography Helpers */
+h1, h2 {
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+p {
+    font-weight: 500;
+    color: var(--grey-500);
+}
+
 
 img {
   max-width: 100%;
@@ -29,7 +45,7 @@ a {
 }
 
 .container {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - 2rem, 1440px);
   margin-inline: auto;
   padding-inline: 1rem;
 }
@@ -54,8 +70,7 @@ a {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  text-decoration: none;
-  color: inherit;
+  color: var(--white);
 
   margin: auto;
 }
@@ -105,11 +120,8 @@ a {
   display: none;
 }
 
-
-
-.nav-link:hover{
-    text-decoration: underline;
-    
+.nav-link:hover {
+  text-decoration: underline;
 }
 /* Hero */
 .hero {
@@ -175,8 +187,8 @@ a {
   cursor: pointer;
 }
 
-.slider-btn::hover{
-    background-color: #706e6e;
+.slider-btn::hover {
+  background-color: #706e6e;
 }
 
 /* About */
@@ -191,7 +203,7 @@ a {
 
 .about-text {
   background: white;
-  /* padding: 2.5rem 1.5rem; */
+  padding: 2.5rem 1.5rem;
 }
 
 .about-text h2 {
@@ -230,7 +242,6 @@ a {
     color: #fff;
   }
 
-
   .hero {
     min-height: 79vh;
   }
@@ -240,7 +251,6 @@ a {
   }
 
   .slide picture {
-    
     flex: 2;
   }
   .hero-content {
@@ -259,14 +269,11 @@ a {
   }
 
   .slider-controls {
-  position: absolute;
-  top: 454px;
-  right: 415px;
-  display: flex;
-  
-
-  
-}
+    position: absolute;
+    top: 454px;
+    right: 415px;
+    display: flex;
+  }
   .about {
     padding-top: 0;
   }
@@ -274,6 +281,4 @@ a {
     grid-template-columns: 1fr 1.8fr 1fr;
     gap: 0;
   }
-
-  
 }
